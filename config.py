@@ -1,10 +1,13 @@
-# import controls.sounds as sd
+import modules.sounds as sd
 
-# print("Criando frases básicas...")
-# sd.generateSound('ask_yes', 'Sim?')
-# sd.generateSound('intention_not_recognized', 'Não entendi sua intenção')
+basicSounds = {
+  'ask_yes': 'Sim?',
+  'intention_not_recognized': 'Sim?',
+  'searching': 'Pesquisando...',
+}
 
-import controls.interpreter as reader
+print("Criando frases básicas...")
 
-reader.readFrase("Busque sobre América do Sul")
-
+for sound in basicSounds:
+  print('Gerando ' + sound)
+  sd.generateSound(sound, basicSounds[sound])

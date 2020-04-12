@@ -1,10 +1,10 @@
 from datetime import datetime
 from bs4 import BeautifulSoup
 from urllib.request import urlopen
-import unicodedata
-import xml
-from controls import sounds
-from controls import database
+
+# from bs4 import BeautifulSoup as bs
+
+import modules.sounds as sounds
 
 def criarPrevisao():
     hora = datetime.now()
@@ -12,14 +12,14 @@ def criarPrevisao():
     # Esse codigo é de Osasco. Para conseguir outros, faça a busca com o
     # nome da sua cidade: http://servicos.cptec.inpe.br/XML/listaCidades?city=Osasco
     target = urlopen('http://servicos.cptec.inpe.br/XML/cidade/3656/previsao.xml')
-    content = BeautifulSoup(target.read(), 'xml')
+    content = BeautifulSoup(target.read(), 'lxml')
     previsao = content.find('previsao')
     
     maxima = previsao.find('maxima').get_text()
     minima = previsao.find('minima').get_text()
     clima = previsao.find('tempo').get_text()
 
-    frase = "Hoje é dia {0} de {1} e terá mínima de {2} e máxima de {3} Graus Celsius, com {4}".format(hora.day, mes[str(hora.month)], minima, maxima, climas[clima])
+    frase = "Hoje, {0} de {1}, terá mínima de {2} e máxima de {3} Graus Celsius, {4}".format(hora.day, mes[str(hora.month)], minima, maxima, climas[clima])
     print(frase)
     sounds.generateSound('current_weather', frase)
     sounds.playSound('current_weather')

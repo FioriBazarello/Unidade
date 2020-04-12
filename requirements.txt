@@ -1,0 +1,6 @@
+SpeechRecognition
+selenium
+beautifulsoup4
+gtts
+pygame
+lxml

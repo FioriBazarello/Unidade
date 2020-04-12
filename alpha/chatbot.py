@@ -1,7 +1,7 @@
 from enum import Enum
 from re import match
 import utilities.weather as weather
-import controls.sounds as sd
+import modules.sounds as sd
 
 def readFrase(message):
     message = message.lower()
