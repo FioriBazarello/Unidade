@@ -35,3 +35,19 @@ Agora é só rodar o programa:
 ## Uso
 O sistema ainda é uma pequena prova de conceito, as funções iniciais são de pesquisa na Wikipedia e busca de previsão do tempo.
 Caso tenha ideias que ache interessante, mande uma mensagem. Pull Requests com correções serão muito apreciados! :)
+
+Para usar as funções, deve-se sempre falar `Unidade` na chamada, para que o programa saiba que quer executar uma função dele.
+
+# Previsão do Tempo
+**Importante:** É necessário configurar a sua cidade para que ele saiba onde pesquisar a previsão. Hoje a configuração é feita no arquivo `utilities/weather.py`, onde há instruções para isso.
+
+* Pesquise a previsão do tempo para hoje: `Unidade, previsão do tempo` ou `Unidade, previsão`;
+
+# Busca
+
+* Presquise um termo na Wikipedia: `Unidade, pesquise Michael Jackson` ou use os termos `busque`, `ache` e `pesquise`;
+
+# Mapa
+
+* Pesquise uma localidade específica: `Unidade, localiza São Paulo`;
+* Pesquise uma rota entre lugares: `Unidade, rota de São Paulo para Buenos Aires`;

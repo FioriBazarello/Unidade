@@ -5,7 +5,6 @@ from time import sleep
 def callback(recog, frase):
     try:
         transc = recog.recognize_google(frase, language='pt')
-        print(transc)
         bot.readFrase(transc)
     except sr.UnknownValueError:
         print('=> Som não reconhecido')
