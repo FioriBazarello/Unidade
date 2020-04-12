@@ -32,25 +32,32 @@ Agora é só rodar o programa:
 
 `python main.py`
 
+## Diretórios
+O sistema é dividido em três partes:
+
+* A raiz do projeto, com o arquivo `main.py` que inicializa o mesmo e o arquivo `config.py` que gera os áudios padrão;
+
+* O diretório `modules` contém os scripts necessários para rodar o programa:
+  *  `listener.py` utiliza a biblioteca SpeechRecognition para transformar os sons do microfone em strings;
+  * `interpreter.py` pega essas comandos em texto e os interpreta, mandando ordens de execução para as funções utilitárias;
+  * `sounds.py` faz o caminho contrário do `listener.py`, ele gera e executa sons a partir de frases.
+
 ## Uso
 O sistema ainda é uma pequena prova de conceito, as funções iniciais são de pesquisa na Wikipedia e busca de previsão do tempo.
 Caso tenha ideias que ache interessante, mande uma mensagem. Pull Requests com correções serão muito apreciados! :)
-<<<<<<< Updated upstream
-=======
 
 Para usar as funções, deve-se sempre falar `Unidade` na chamada, para que o programa saiba que quer executar uma função dele.
 
 ### Previsão do Tempo
 **Importante:** É necessário configurar a sua cidade para que ele saiba onde pesquisar a previsão. Hoje a configuração é feita no arquivo `utilities/weather.py`, onde há instruções para isso.
 
-* Pesquise a previsão do tempo para hoje: `Unidade, previsão do tempo` ou `Unidade, previsão`;
+* Ouça a previsão do tempo para hoje: `Unidade, previsão do tempo` ou `Unidade, previsão`;
 
 ### Busca
 
-* Presquise um termo na Wikipedia: `Unidade, pesquise Michael Jackson` ou use os termos `busque`, `ache` e `pesquise`;
+* Pesquise um termo na Wikipedia: `Unidade, pesquise Michael Jackson` ou use os termos `busque`, `ache` e `pesquise`;
 
 ### Mapa
 
 * Pesquise uma localidade específica: `Unidade, localiza São Paulo`;
 * Pesquise uma rota entre lugares: `Unidade, rota de São Paulo para Buenos Aires`;
->>>>>>> Stashed changes
