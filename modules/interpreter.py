@@ -6,9 +6,14 @@ import utilities.weather as weather
 
 def readFrase(message):
     message = message.lower()
-    intention = searchIntention(message)
-    subjects = searchSubject(message)
-    intentionAction(intention, subjects)
+    print(message)
+    if isCalling(message):
+        intention = searchIntention(message)
+        subjects = searchSubject(message)
+        intentionAction(intention, subjects)
+
+def isCalling(message):
+    return 'unidade' in message
 
 def searchIntention(message):
     intentionNum = 0
