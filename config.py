@@ -4,6 +4,9 @@ basicSounds = {
   'ask_yes': 'Sim?',
   'intention_not_recognized': 'Sim?',
   'searching': 'Pesquisando...',
+  'searching_location': 'Pesquisando localização...',
+  'searching_route': 'Pesquisando rota...',
+  'exiting': 'Parando execução'
 }
 
 print("Criando frases básicas...")

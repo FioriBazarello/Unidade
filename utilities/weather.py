@@ -20,9 +20,7 @@ def criarPrevisao():
     clima = previsao.find('tempo').get_text()
 
     frase = "Hoje, {0} de {1}, terá mínima de {2} e máxima de {3} Graus Celsius, {4}".format(hora.day, mes[str(hora.month)], minima, maxima, climas[clima])
-    print(frase)
-    sounds.generateSound('current_weather', frase)
-    sounds.playSound('current_weather')
+    sounds.playTemporarySound(frase)
 
 climas = {
     'ec':'Encoberto com Chuvas Isoladas',
