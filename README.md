@@ -20,7 +20,7 @@ Instale as dependências:
 Caso aconteça algum problema com a instalação do PyAudio, provavelmente você precisa instalar os binários da biblioteca para Windows. Não se preocupe, é fácil:
 
 * Descubra a sua versão do Python e se é 32 ou 64 bits rodando `python` no terminal. Toda a informação necessária vai aparecer com esse comando;
-* Baixe o arquivo `whl` correspondente a sua versão do Python. Se for, por exemplo, `3.7.3` e `64 bit (AMD64)` segundo o passo acima, você vai baixar o `PyAudio‑0.2.11‑cp37‑cp37m‑win_amd64.whl`;
+* Baixe o arquivo `whl` correspondente a sua versão do Python [nesta página](https://www.lfd.uci.edu/~gohlke/pythonlibs/#pyaudio). Se for, por exemplo, `3.7.3` e `64 bit (AMD64)` segundo o passo acima, você vai baixar o `PyAudio‑0.2.11‑cp37‑cp37m‑win_amd64.whl`;
 * Vá para o diretório onde você baixou os binários pelo terminal e instale usando o comando `pip install <nome do arquivo baixado>`. O do exemplo acima, por exemplo, seria `pip install PyAudio-0.2.11-cp37-cp37m-win_amd64.whl`;
 * Tente instalar as dependências novamente.
 
