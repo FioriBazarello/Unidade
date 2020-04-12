@@ -32,6 +32,16 @@ Agora é só rodar o programa:
 
 `python main.py`
 
+## Diretórios
+O sistema é dividido em três partes:
+
+* A raiz do projeto, com o arquivo `main.py` que inicializa o mesmo e o arquivo `config.py` que gera os áudios padrão;
+
+* O diretório `modules` contém os scripts necessários para rodar o programa:
+  *  `listener.py` utiliza a biblioteca SpeechRecognition para transformar os sons do microfone em strings;
+  * `interpreter.py` pega essas comandos em texto e os interpreta, mandando ordens de execução para as funções utilitárias;
+  * `sounds.py` faz o caminho contrário do `listener.py`, ele gera e executa sons a partir de frases.
+
 ## Uso
 O sistema ainda é uma pequena prova de conceito, as funções iniciais são de pesquisa na Wikipedia e busca de previsão do tempo.
 Caso tenha ideias que ache interessante, mande uma mensagem. Pull Requests com correções serão muito apreciados! :)
