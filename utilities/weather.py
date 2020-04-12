@@ -1,17 +1,16 @@
 from datetime import datetime
 from bs4 import BeautifulSoup
 from urllib.request import urlopen
-
-# from bs4 import BeautifulSoup as bs
-
 import modules.sounds as sounds
+
+# Esse codigo é de Osasco. Para conseguir outros, faça a busca com o
+# nome da sua cidade: http://servicos.cptec.inpe.br/XML/listaCidades?city=NomeDaCidade
+cityCode = '3656'
 
 def criarPrevisao():
     hora = datetime.now()
 
-    # Esse codigo é de Osasco. Para conseguir outros, faça a busca com o
-    # nome da sua cidade: http://servicos.cptec.inpe.br/XML/listaCidades?city=Osasco
-    target = urlopen('http://servicos.cptec.inpe.br/XML/cidade/3656/previsao.xml')
+    target = urlopen('http://servicos.cptec.inpe.br/XML/cidade/{0}/previsao.xml'.format(cityCode))
     content = BeautifulSoup(target.read(), 'lxml')
     previsao = content.find('previsao')
     
